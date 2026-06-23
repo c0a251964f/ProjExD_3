@@ -142,7 +142,13 @@ class Bomb:
 
 
 class Score:
+    """
+    スコアを表示させるためのクラス
+    """
     def __init__(self):
+        """
+        初期値を設定する
+        """
         self.fonto = pg.font.Font(None, 50)
         self.color = (0, 0, 255)
         self.score = 0
@@ -151,6 +157,9 @@ class Score:
         self.rct.center = (100, HEIGHT-50)
     
     def update(self, screen: pg.Surface):
+        """
+        スコア表示機能
+        """
         self.img = self.fonto.render(f"Score: {self.score}", 0, self.color)
         screen.blit(self.img, self.rct)
 
