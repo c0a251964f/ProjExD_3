@@ -169,8 +169,11 @@ def main():
         if bomb is not None:
             if beam is not None:
                 if beam.rct.colliderect(bomb.rct):
+                    bird.change_img(9, screen)
+                    pg.display.update()
                     beam = None
                     bomb = None
+
 
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
